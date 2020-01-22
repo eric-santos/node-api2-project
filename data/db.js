@@ -10,10 +10,11 @@ module.exports = {
   remove,
   findPostComments,
   findCommentById,
-  insertComment,
+  insertComment
 };
 
-function find() {
+function find(query) {
+  const { page = 1, limit = 5, sortby = 'id', sortdir = 'asc' } = query;
   return db('posts');
 }
 
